@@ -54,11 +54,11 @@ SIMULATION = True
 #num_kars = 10000
 
 #values for simulating different alpha values (please note that the java code also needs to be modified in this case):
-simul_name = 'simul811'
-CNV_fname = simul_name+'_cnv.txt'
-BP_fname = simul_name+'_bp.txt'
-defaults_list_name = simul_name+'_list.txt'
-alpha_values = [0.0,0.01,0.02,0.03,0.04,0.05,0.1,0.25,0.5,1.0,2.0]
+#simul_name = 'simul811'
+#CNV_fname = simul_name+'_cnv.txt'
+#BP_fname = simul_name+'_bp.txt'
+#defaults_list_name = simul_name+'_list.txt'
+#alpha_values = [0.0,0.01,0.02,0.03,0.04,0.05,0.1,0.25,0.5,1.0,2.0]
 
 #values for simulating different noise values:
 #simul_name = 'simul802'
