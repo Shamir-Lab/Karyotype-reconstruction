@@ -423,20 +423,21 @@ def apply_bridge_filters(samp_list = ''):
 	
 # Create a batch of simulated rearranged karyotypes
 def create_simulation_batch(name_param=''):
-	if name_param=='':
-		name = params.simul_name
-	else:
-		name = name_param
-	print 'creating simulation batch ', name
-	print 'operations: ', min_ops, '-',max_ops
-	print num_kars, 'random karyotypes for each number of operations'
-	print 'each with nosise values (epsilon): ', eps_cnv
-	if name_param == '':
-		simulations.create_simulated_karyotypes(max_ops, min_ops)
-	else:
-		simulations.create_simulated_karyotypes(max_ops, min_ops, name)
-	print '\nCreated bp and cnv files: ', CNV_fname, ', ', BP_fname
-	print 'Full list of batch is in: ', defaults_list_name, '. full kars are in: ', simul_name+'_debug.txt'
+	if (SIMULATION):
+		if name_param=='':
+			name = params.simul_name
+		else:
+			name = name_param
+		print 'creating simulation batch ', name
+		print 'operations: ', min_ops, '-',max_ops
+		print num_kars, 'random karyotypes for each number of operations'
+		print 'each with nosise values (epsilon): ', eps_cnv
+		if name_param == '':
+			simulations.create_simulated_karyotypes(max_ops, min_ops)
+		else:
+			simulations.create_simulated_karyotypes(max_ops, min_ops, name)
+		print '\nCreated bp and cnv files: ', CNV_fname, ', ', BP_fname
+		print 'Full list of batch is in: ', defaults_list_name, '. full kars are in: ', simul_name+'_debug.txt'
 	
 	print 'Preparing graph files for ILP run'
 	if name_param=='':
