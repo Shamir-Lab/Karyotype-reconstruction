@@ -18,7 +18,6 @@ These instructions will get you a copy of the project up and running on your loc
 
 example (paths may differ):
 ```
-compile:
 javac -classpath workspace/LP_ex1/bin:/usr/local/stow/cplex125/lib/cplex125/lib/cplex.jar -d ./work/ ./workspace/LP_ex1/src/ex1.java
 ```
 
@@ -78,9 +77,9 @@ The main parameters changed for each simulation are:
 * p_miss_brdg - the probability of missing a bridge
 * noise_kar_ratio - the percent of samples taken from a different karyotype
 * noise_kar_options - A list detailing the rearrangement the "noise" karyotype goes through in relation to the main karyotype. the options are:
-* * 'none' - The noisy karyotype doesn not go through a rearrangement (if this is the only option, the noisy karyotype will represent a healthy tissue)
-* * 'same' - The noisy karyotype goes through the same rearrangement. 
-* * 'dif' - The noisy karyotype goes through a different rearrangement.
+ * 'none' - The noisy karyotype doesn not go through a rearrangement (if this is the only option, the noisy karyotype will represent a healthy tissue)
+ * 'same' - The noisy karyotype goes through the same rearrangement. 
+ * 'dif' - The noisy karyotype goes through a different rearrangement.
 
 
 In addition these parameters can also be set:
@@ -122,30 +121,30 @@ You can use the function CreateGraph.create_gv_input_list(samp_list) to convert 
 
 #### Create BP.txt and CNV.txt
 In the BP.txt file each row represents a bridge between two breakpoints and has the following columns:
-* * chrom1 - Chromosome of the first breakpoint
-* * pos1 - Start position of the first breakpoint
-* * pos2 - End position of the first breakpoint
-* * chrom2 - Chromosome of the second breakpoint
-* * pos3 - Start position of the second breakpoint
-* * pos4 - End position of the second breakpoint
-* * support - Support score of the bridge
-* * strand1	- Strand of the first breakpoint (which "side" of the break is joined)
-* * strand2	- Strand of the second breakpoint (which "side" of the break is joined)
-* * variantClass - (INV, DUP, DEL, INTRA, INTER) (unused)
-* * sample - The sample the break was found in	
+* chrom1 - Chromosome of the first breakpoint
+* pos1 - Start position of the first breakpoint
+* pos2 - End position of the first breakpoint
+* chrom2 - Chromosome of the second breakpoint
+* pos3 - Start position of the second breakpoint
+* pos4 - End position of the second breakpoint
+* support - Support score of the bridge
+* strand1	- Strand of the first breakpoint (which "side" of the break is joined)
+* strand2	- Strand of the second breakpoint (which "side" of the break is joined)
+* variantClass - (INV, DUP, DEL, INTRA, INTER) (unused)
+* sample - The sample the break was found in	
 
 A sample BP.txt file can be found in the repository (based on data taken from Malhorta et al.)
 
 In the CNV.txt file each row represents on copy number change, and has the following column headers:
-* * Chromosome - Chromosome of the change-point
-* * Start - Start coordinate of the change-point
-* * End	- End coordinate of the change-point
-* * Left Segment Zscore - Zscore of the flanking segment on the left of the change-point (unused)
-* * Right Segment Zscore - Zscore of the flanking segment on the right of the change-point (unused)
-* * Delta Zscore - Difference in Zscores (unused)
-* * Left Segment Copy Number - Estimated copy number of the flanking segment to the left of the change-point
-* * Right Segment Copy Number - Estimated copy number of the flanking segment to the right of the change-point
-* * Sample name - The sample the changepoint is found in.
+* Chromosome - Chromosome of the change-point
+* Start - Start coordinate of the change-point
+* End	- End coordinate of the change-point
+* Left Segment Zscore - Zscore of the flanking segment on the left of the change-point (unused)
+* Right Segment Zscore - Zscore of the flanking segment on the right of the change-point (unused)
+* Delta Zscore - Difference in Zscores (unused)
+* Left Segment Copy Number - Estimated copy number of the flanking segment to the left of the change-point
+* Right Segment Copy Number - Estimated copy number of the flanking segment to the right of the change-point
+* Sample name - The sample the changepoint is found in.
 
 A sample CNV.txt file can be found in the repository (based on data taken from Malhorta et al.)
 
