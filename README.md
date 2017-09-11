@@ -77,9 +77,9 @@ The main parameters changed for each simulation are:
 * p_miss_brdg - the probability of missing a bridge
 * noise_kar_ratio - the percent of samples taken from a different karyotype
 * noise_kar_options - A list detailing the rearrangement the "noise" karyotype goes through in relation to the main karyotype. the options are:
- * 'none' - The noisy karyotype doesn not go through a rearrangement (if this is the only option, the noisy karyotype will represent a healthy tissue)
- * 'same' - The noisy karyotype goes through the same rearrangement. 
- * 'dif' - The noisy karyotype goes through a different rearrangement.
+  * 'none' - The noisy karyotype doesn not go through a rearrangement (if this is the only option, the noisy karyotype will represent a healthy tissue)
+  * 'same' - The noisy karyotype goes through the same rearrangement. 
+  * 'dif' - The noisy karyotype goes through a different rearrangement.
 
 
 In addition these parameters can also be set:
